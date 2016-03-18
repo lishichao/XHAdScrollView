@@ -13,6 +13,10 @@
 		2FE6EC301C92A1ED00004D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6EC2F1C92A1ED00004D19 /* Assets.xcassets */; };
 		2FE6EC331C92A1ED00004D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6EC311C92A1ED00004D19 /* LaunchScreen.storyboard */; };
 		2FE6EC3E1C92A1ED00004D19 /* XHAdScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6EC3D1C92A1ED00004D19 /* XHAdScrollViewTests.swift */; };
+		2FE6EC4F1C92A22600004D19 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6EC4A1C92A22600004D19 /* 2.jpg */; };
+		2FE6EC501C92A22600004D19 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6EC4B1C92A22600004D19 /* 3.jpg */; };
+		2FE6EC511C92A22600004D19 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6EC4C1C92A22600004D19 /* 4.jpg */; };
+		2FE6EC541C92A28B00004D19 /* XHAdLoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6EC531C92A28B00004D19 /* XHAdLoopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		2FE6EC391C92A1ED00004D19 /* XHAdScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XHAdScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE6EC3D1C92A1ED00004D19 /* XHAdScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XHAdScrollViewTests.swift; sourceTree = "<group>"; };
 		2FE6EC3F1C92A1ED00004D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FE6EC4A1C92A22600004D19 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		2FE6EC4B1C92A22600004D19 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		2FE6EC4C1C92A22600004D19 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		2FE6EC531C92A28B00004D19 /* XHAdLoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHAdLoopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,14 @@
 		2FE6EC271C92A1ED00004D19 /* XHAdScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				2FE6EC481C92A1FD00004D19 /* 图片 */,
 				2FE6EC281C92A1ED00004D19 /* AppDelegate.swift */,
 				2FE6EC2A1C92A1ED00004D19 /* ViewController.swift */,
 				2FE6EC2C1C92A1ED00004D19 /* Main.storyboard */,
 				2FE6EC2F1C92A1ED00004D19 /* Assets.xcassets */,
 				2FE6EC311C92A1ED00004D19 /* LaunchScreen.storyboard */,
 				2FE6EC341C92A1ED00004D19 /* Info.plist */,
+				2FE6EC531C92A28B00004D19 /* XHAdLoopView.swift */,
 			);
 			path = XHAdScrollView;
 			sourceTree = "<group>";
@@ -94,6 +104,16 @@
 				2FE6EC3F1C92A1ED00004D19 /* Info.plist */,
 			);
 			path = XHAdScrollViewTests;
+			sourceTree = "<group>";
+		};
+		2FE6EC481C92A1FD00004D19 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				2FE6EC4A1C92A22600004D19 /* 2.jpg */,
+				2FE6EC4B1C92A22600004D19 /* 3.jpg */,
+				2FE6EC4C1C92A22600004D19 /* 4.jpg */,
+			);
+			name = "图片";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE6EC331C92A1ED00004D19 /* LaunchScreen.storyboard in Resources */,
+				2FE6EC511C92A22600004D19 /* 4.jpg in Resources */,
+				2FE6EC4F1C92A22600004D19 /* 2.jpg in Resources */,
+				2FE6EC501C92A22600004D19 /* 3.jpg in Resources */,
 				2FE6EC301C92A1ED00004D19 /* Assets.xcassets in Resources */,
 				2FE6EC2E1C92A1ED00004D19 /* Main.storyboard in Resources */,
 			);
@@ -199,6 +222,7 @@
 			files = (
 				2FE6EC2B1C92A1ED00004D19 /* ViewController.swift in Sources */,
 				2FE6EC291C92A1ED00004D19 /* AppDelegate.swift in Sources */,
+				2FE6EC541C92A28B00004D19 /* XHAdLoopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +412,7 @@
 				2FE6EC441C92A1ED00004D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2FE6EC451C92A1ED00004D19 /* Build configuration list for PBXNativeTarget "XHAdScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +421,7 @@
 				2FE6EC471C92A1ED00004D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
