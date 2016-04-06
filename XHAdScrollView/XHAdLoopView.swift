@@ -84,7 +84,7 @@ class XHAdLoopView: UIView {
         for index in 0..<3 {
             let imageView = UIImageView(frame: CGRectMake(self.bounds.width*CGFloat(index), 0, self.bounds.width, self.bounds.height))
             imageView.userInteractionEnabled = true
-            imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "imageViewClick"))
+            imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(XHAdLoopView.imageViewClick)))
             
             
             if self.isFromNet == true {
@@ -116,13 +116,13 @@ class XHAdLoopView: UIView {
     }
     
     private func startAutoPlay() {
-        self.performSelector("nextPage", withObject: nil, afterDelay: delay!)
+        self.performSelector(#selector(XHAdLoopView.nextPage), withObject: nil, afterDelay: delay!)
     }
     
     func nextPage() {
-        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "nextPage", object: nil)
+        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: #selector(XHAdLoopView.nextPage), object: nil)
         imageScrollView!.setContentOffset(CGPointMake(2 * self.frame.width, 0), animated: true)
-        self.performSelector("nextPage", withObject: nil, afterDelay: delay!)
+        self.performSelector(#selector(XHAdLoopView.nextPage), withObject: nil, afterDelay: delay!)
     }
     
     //每次图片滚动时刷新图片
@@ -142,7 +142,7 @@ class XHAdLoopView: UIView {
     
     //图片点击
     func imageViewClick(){
-        if self.delegate != nil && (self.delegate?.respondsToSelector("adLoopView:IconClick:")) != nil {
+        if self.delegate != nil && (self.delegate?.respondsToSelector(#selector(XHAdLoopViewDelegate.adLoopView(_:IconClick:)))) != nil {
             self.delegate!.adLoopView(self, IconClick: currentPage!)
         }
     }
@@ -172,6 +172,6 @@ extension XHAdLoopView : UIScrollViewDelegate{
 }
 
 //自定义代理方法
-protocol XHAdLoopViewDelegate:NSObjectProtocol {
+@objc protocol XHAdLoopViewDelegate:NSObjectProtocol {
     func adLoopView(adLoopView:XHAdLoopView ,IconClick index:NSInteger)
 }
